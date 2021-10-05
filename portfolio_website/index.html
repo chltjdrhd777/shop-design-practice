@@ -1,19 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Michael G. | Portfolio</title>
     <!--Import fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <!--Import icons-->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  </head>
+  <body>
+    <!-- toggle -->
+    <div class="hamburder-menu">
+      <i class="ion-navicon open"></i>
+      <i class="ion-android-close close"></i>
+    </div>
 
-<!--Link JS-->
-<script src="main.js"></script>
-</body>
+    <!-- aside navs -->
+    <nav class="nav">
+      <!-- aside(4) intro, ul, socials, copyRight-->
+      <div class="intro">
+        <h1 class="intro-heading">Anderson</h1>
+        <h2 class="intro-subhead">front developer</h2>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="social-media-wrapper">
+        <span>Follow me on</span>
+        <div class="social-media">
+          <a href="#" class="sm-link">
+            <i class="ion-social-instagram"></i>
+          </a>
+          <a href="#" class="sm-link">
+            <i class="ion-social-twitter"></i>
+          </a>
+          <a href="#" class="sm-link">
+            <i class="ion-social-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="copy-right-notice">
+        <p>Copyright &copy; 2021. All rights reserved.</p>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main class="main">
+      <!-- hero -->
+      <section class="hero">
+        <h5 class="name-heading">Anderson</h5>
+        <img
+          class="hero-person-image"
+          src="./images/hero-background_overlay.png"
+          alt=""
+        />
+        <!-- scroll animation -->
+        <a href="#" class="scroll-down">
+          <div class="mouse">
+            <span></span>
+          </div>
+
+          <div class="arrow">
+            <span></span>
+          </div>
+        </a>
+      </section>
+
+      <section class="about-me" id="about">
+        <div class="container">
+          <div class="heading-group">
+            <span class="section-head-small">About</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Link JS-->
+    <script src="main.js"></script>
+  </body>
 </html>
