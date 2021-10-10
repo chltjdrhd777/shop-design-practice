@@ -23,6 +23,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -163,6 +164,7 @@ section:not(.hero) {
 }
 
 .hero {
+  width: 100%;
   height: 100vh;
   background: url("./images/hero_background.jpg") bottom center/cover;
   position: relative;
@@ -175,7 +177,7 @@ section:not(.hero) {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 18vw;
+  font-size: 14vw;
   font-family: var(--heading-font-family);
   color: var(--light-color);
   z-index: 1;
@@ -183,7 +185,7 @@ section:not(.hero) {
 }
 
 .hero-person-image {
-  max-width: 95%;
+  width: 36vw;
   user-select: none;
   -webkit-user-drag: none;
   margin-top: auto;
@@ -455,7 +457,6 @@ section:not(.hero) {
 }
 
 .motto {
-  height: 35vh;
   background: url("images/section_background.jpg") bottom/cover;
   position: relative;
   z-index: 1;
@@ -686,6 +687,64 @@ section:not(.hero) {
   padding: 1rem 5rem;
 }
 
+/* ! contact */
+.contact-info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex-basis: 45%;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.info-item-icon {
+  background-color: var(--light-gray-color);
+  display: flex;
+  width: 10rem;
+  font-size: 5rem;
+  color: var(--blue-color);
+  border-radius: 3px;
+}
+.info-item-icon i {
+  margin: auto;
+}
+
+.data-wrapper {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form .input,
+.contact-form textarea {
+  width: 100%;
+  background-color: var(--light-gray-color);
+  font-family: var(--body-font-family);
+  color: var(--body-font-color);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.contact-form .btn {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 /* animation */
 @keyframes move-wheal {
   0% {
@@ -715,5 +774,159 @@ section:not(.hero) {
 
   100% {
     opacity: 1;
+  }
+}
+
+/* media */
+@media screen and (max-width: 1030px) {
+  .nav {
+    transform: translateX(-27rem);
+    transition: transform 0.5s;
+  }
+
+  .is-open .nav {
+    transform: translateX(0);
+  }
+
+  .hamburder-menu {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+    z-index: 2000;
+  }
+
+  .hamburder-menu i {
+    margin: auto;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .is-open .hamburder-menu {
+    transform: translateX(21rem);
+  }
+  .is-open .close {
+    display: block;
+  }
+  .is-open .open {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+    transform: initial;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
+  }
+
+  .is-open .hero::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .name-heading {
+    font-size: 14vw;
+  }
+
+  .portfolio-item-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+
+  .project-name {
+    transform: translateY(0);
+  }
+
+  .project-type {
+    transform: translateY(0);
+  }
+
+  .info-btn:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid,
+  .my-portfolio .grid {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .hero {
+    height: 50rem;
+  }
+
+  .call-to-action p {
+    font-size: 2rem;
+  }
+
+  .motto {
+    height: 100vh;
+  }
+
+  .quote::before,
+  .quote::after {
+    font-size: 7rem;
+  }
+
+  .quote-wrapper {
+    max-width: 38rem;
+  }
+
+  .quote::before {
+    bottom: -3rem;
+    left: -3rem;
+  }
+
+  .timeline-heading {
+    display: block;
+  }
+
+  .timeline-entry-name {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+  .nav {
+    overflow-y: scroll;
+  }
+
+  .hero {
+    height: initial;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1925px) {
+  html {
+    font-size: 75%;
   }
 }
